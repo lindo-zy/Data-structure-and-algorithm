@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 # -*- coding:utf-8 -*-
+
 '''
-循环链表
-Circylar   linked   lists
+josephus问题：假设n个人围坐一圈，从第K个人开始报数，报到m个数的人退出，
+                然后下一个人接着报数，直到所有人退出
+使用循环单链表实现   时间开销约为O(n)
 '''
 
 
@@ -42,24 +44,20 @@ class LCList:  # 循环单链表
             self._rear.next = p.next
         return p.elem
 
-    def printall(self):  # 输出链表
-        if self.is_empty():
-            return
-        p = self._rear.next
-        while True:
-            print(p.elem,end=' ')
-            if p is self._rear:
-                break
-            p = p.next
+
+class josepthus(LCList):
+    def turn(self, m):
+        for i in range(m):
+            self._rear = self._rear.next
+
+    def __init__(self, n, k, m):
+        LCList.__init__(self)
+        for i in range(n):
+            self.append(i + 1)
+        self.turn(k - 1)
+        while not self.is_empty():
+            self.turn(m - 1)
+            print(self.pop(), end='\n' if self.is_empty() else ', ')
 
 
-mlist = LCList()
-for i in range(5):  # 表首插入 5个元素
-    mlist.prepend(i)  # 4,3,2,1,0
-
-for i in range(5, 10):  # 表尾插入5个元素
-    mlist.append(i)  # 5,6,7,8,9
-mlist.printall()  # 4,3,2,1,0,5,6,7,8,9
-print('\n',mlist.pop())  # 4
-
-print(mlist.is_empty())  # False
+test = josepthus(6, 1, 3)

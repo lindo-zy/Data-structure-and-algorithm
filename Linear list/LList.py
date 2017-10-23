@@ -5,13 +5,13 @@ page:85     LList()的实现
 '''
 
 
-class LNode():
+class LNode():  # 结点类
     def __init__(self, elem, next_=None):
         self.elem = elem
         self.next = next_
 
 
-class LList():
+class LList():  # 链表类
     def __init__(self):
         self._head = None
 
@@ -55,14 +55,14 @@ class LList():
         return e
 
     def getIndex(self, elem):  # 获取元素索引
-        j = 0
+        index = 0
         p = self._head
         while p is not None:
             if p.elem == elem:
-                print('元素 %s 的索引为 :%s' % (elem, j))
-                return j
+                print('元素 %s 的索引为 :%s' % (elem, index))
+                return index
             p = p.next
-            j += 1
+            index += 1
 
     def printall(self):  # 打印出所有表
         p = self._head
@@ -73,13 +73,21 @@ class LList():
             p = p.next
         print('')
 
+    def length(self):  # 获取链表长度
+        p, n = self._head, 0
+        while p is not None:
+            n += 1
+            p = p.next
+        print('当前链表长度为：', n)
+        return n
+
     def for_each(self):  # 链表遍历
         p = self._head
         while p is not None:
             yield p.elem
             p = p.next
 
-    def find(self, pred):   #查找符合要求的元素，pred为lambda表达式
+    def find(self, pred):  # 查找符合要求的元素，pred为表达式
         p = self._head
         while p is not None:
             if pred(p.elem):
@@ -87,13 +95,58 @@ class LList():
                 return p.elem
             p = p.next
 
-    def filter(self, pred):  # 筛选生成器
+    def filter(self, pred):  # 筛选生成器,pred为表达式
         p = self._head
         while p is not None:
             if pred(p.elem):
                 yield p.elem
             p = p.next
 
+    def rev(self):
+        p = None
+        while self._head is not None:
+            q = self._head
+            self._head = q.next
+            q.next = p
+            p = q
+        self._head = p
+
+    def sort1(self):  # 插入排序
+        if self._head is None:
+            return
+        crt = self._head.next
+        while crt is not None:
+            x = crt.elem
+            p = self._head
+            while p is not crt and p.elem <= x:
+                p = p.next
+            while p is not crt:
+                y = p.elem
+                p.elem = x
+                x = y
+                p = p.next
+            crt.elem = x
+            crt = crt.next
+
+    def sort(self):     #插入排序
+        p = self._head
+        if p is None or p.next is None:
+            return
+        rem = p.next
+        p.next = None
+        while rem is not None:
+            p = self._head
+            q = None
+            while p is not None and p.elem <= rem.elem:
+                q = p
+                p = p.next
+            if q is None:
+                self._head = rem
+            else:
+                q.next = rem
+            q = rem
+            rem = rem.next
+            q.next = p
 
 
 # 测试
@@ -113,12 +166,17 @@ print('链表是否为空:', mlist.is_empty())  # False
 mlist.printall()  # 3 2 1 0 5 6 7
 mlist.getIndex(5)
 
-for i  in mlist.for_each():  # 遍历
+for i in mlist.for_each():  # 遍历
     print('%s' % i, end=' ')
 
-mlist.find(pred=lambda i:2<i<8) #3
+mlist.find(pred=lambda i: 2 < i < 8)  # 3
 
-for i in mlist.filter(lambda i: 8>i > 2):
-    print('\n', i, end='')  #3 5 6 7
-
-
+for i in mlist.filter(lambda i: 8 > i > 2):
+    print('\n', i, end=' ')  # 3 5 6 7
+print('\n')
+mlist.printall()
+mlist.length()
+mlist.rev()
+mlist.printall()
+mlist.sort1()
+mlist.printall()
