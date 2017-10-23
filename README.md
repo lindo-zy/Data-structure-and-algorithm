@@ -5,7 +5,7 @@ Data structure and algorithm in python3
 <br>数据结构可视化https://visualgo.net
 ---
 * Introduction  
-第一章的事例代码
+第一章的示例代码
 ---
 * Linear list  
 线性表和链表部分代码
