@@ -1,8 +1,9 @@
 # Data-structure-and-algorithm
-Data structure and algorithm in python3
+Data structure and algorithm in python3  
 <br>《数据结构与算法-python语言描述》
-作者：裘宗燕
-<br>数据结构可视化https://visualgo.net
+作者：裘宗燕  
+<br>数据结构可视化https://visualgo.net  
+
 ---
 * Introduction  
 第一章的示例代码
@@ -20,6 +21,9 @@ Data structure and algorithm in python3
   * samples  
   本部分应用例子(某些例子存在问题，后续可能修正)
 ---
-*  
+*  Tree  
+二叉树与树  
+   * samples  
+   本部分应用例子 
 
  
