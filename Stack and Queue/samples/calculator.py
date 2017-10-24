@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding:utf-8 -*-
 '''
-表达式计算
+后缀式计算器
 '''
 
 
@@ -30,7 +30,7 @@ class EStack(Stack):
     def depth(self):
         return len(self._elems)
 
-    def suf_exp_evaluator(self, exp):
+    def suffix_exp_evaluator(self, exp):
         operators = '+-*/'
         st = EStack()
 
@@ -60,12 +60,16 @@ class EStack(Stack):
         raise SyntaxError('Extra operand(s)')
 
 
-def suffix_exp_calculator():
-    while True:
-        try:
-            line = input('Suffix Expression:')
-            if line == 'end': return
-            res = suffix_exp_calculator(line)
-            print(res)
-        except Exception as e:
-            print('Error', type(e), e.args)
+if __name__ == '__main__':
+    s=EStack()
+
+    def suffix_exp_calculator():
+        while True:
+            try:
+                line = input('Suffix Expression:')
+                if line == 'end': return
+                res = s.suffix_exp_evaluator(line)
+                print(res)
+            except Exception as e:
+                print('Error', type(e), e.args)
+    suffix_exp_calculator()

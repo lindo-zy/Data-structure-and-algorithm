@@ -8,11 +8,18 @@ Data structure and algorithm in python3
 第一章的示例代码
 ---
 * Linear list  
-线性表和链表部分代码
-  * samples  
-  本部分的应用例子
+线性表和链表
+  * samples：  
+  本部分应用例子
 ---
 * String  
 字符串的匹配，KMP算法
+---
+* Stack and Queue  
+栈和队列  
+  * samples  
+  本部分应用例子(某些例子存在问题，后续可能修正)
+---
+*  
 
  
