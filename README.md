@@ -3,6 +3,10 @@ Data structure and algorithm in python3
 <br>《数据结构与算法-python语言描述》
 作者：裘宗燕  
 <br>数据结构可视化https://visualgo.net  
+<br>ps.例子存在问题，有以下几个可能：
+1.  书上代码没给全，只描述了思想，无法运行测试，查看结果
+2.  书上代码运行时，部分报错
+3.  我在学习时，部分代码没有理解或者读懂，无法运行测试，后续可能订正
 
 ---
 * Introduction  
@@ -24,6 +28,6 @@ Data structure and algorithm in python3
 *  Tree  
 二叉树与树  
    * samples  
-   本部分应用例子 
+   本部分应用例子(某些例子存在问题，后续可能修正)
 
  
