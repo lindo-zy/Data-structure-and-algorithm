@@ -49,6 +49,7 @@ class PrioQue():
     def dequeue(self):
         if self.is_empty():
             raise PrioQueueError('in dequeue()')
+
         return self._elems.pop()
 
 
@@ -67,3 +68,7 @@ def HuffmanTree(weights):  # 计算路径长度
         x = t1.data + t2.data
         trees.enqueue(HTNode(x, t1, t2))
     return trees.dequeue()
+
+
+for i in range(1, 10):
+    HuffmanTree(str(i))
