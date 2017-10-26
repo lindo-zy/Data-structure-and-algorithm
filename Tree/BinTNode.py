@@ -143,4 +143,30 @@ def preorder_nonrec(t):  # 先根遍历，非递归
         t = s.pop()
 
 
+print('\n')
 preorder_nonrec(t)
+
+
+def preorder_elements(t):  # 先根遍历，生成器
+    s = Stack()
+    while t is not None or not s.is_empty():
+        while t is not None:
+            s.push(t.right)
+            yield t.data
+            t = t.left
+        t = s.pop()
+        print(t)
+
+
+def postorder_nonrec(t):  # 后根遍历，非递归
+    s = Stack()
+    while t is not None or s.is_empty():
+        while t is not None:
+            s.push(t)
+            t = t.left if t.left is not None else t.right
+        t = s.pop()
+        print(t.data)
+        if not s.is_empty() and s.top().left == t:
+            t = s.top().right
+        else:
+            t = None
