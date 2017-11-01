@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 '''
 哈夫曼树
+ps.程序无法测试，后续可能订正
 '''
 
 
@@ -58,7 +59,7 @@ class HuffmanPrioQ(PrioQue):  # 哈夫曼树类
         return len(self._elems)
 
 
-def HuffmanTree(weights):  # 计算路径长度
+def HuffmanTree(weights):  # 生成哈夫曼树
     trees = HuffmanPrioQ()
     for w in weights:
         trees.enqueue(HTNode(w))
@@ -70,5 +71,3 @@ def HuffmanTree(weights):  # 计算路径长度
     return trees.dequeue()
 
 
-for i in range(1, 10):
-    HuffmanTree(str(i))
