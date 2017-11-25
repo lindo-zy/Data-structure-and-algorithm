@@ -31,6 +31,12 @@ Data structure and algorithm in python3
    本部分应用例子(某些例子存在问题，后续可能修正)  
 ---
 * Graph  
-图
+图(本章节较为困难,以后再进行修正补充)  
+---
+* Dictionary and collection  
+字典和集合(本章节较为困难,以后再进行修正补充)
+---
+* Sort  
+排序
 
  
