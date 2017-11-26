@@ -37,6 +37,12 @@ Data structure and algorithm in python3
 字典和集合(本章节较为困难,以后再进行修正补充)
 ---
 * Sort  
-排序
+排序  
+1.插入排序　　insert_sort　　最坏O(n^2)　　最好O(n)　　平均O(n^2)  　稳定算法  
+2.冒泡排序　　bubble_sort  　最坏O(n^2)　　最好O(n)　　平均O(n^2)　　稳定算法  
+3.选择排序　　select_sort　　最坏O(n^2)　　最好O(n^2)　平均O(n^2)　　不稳定算法    
+4.快速排序　　quick_sort　　 最坏O(n^2)　　最好O(n*logn)　平均O(n*logn)　　不稳定算法  
+5.归并排序　　merge_sort　　 最坏O(n*logn)　　最好O(n*logn)　　平均O(n*logn)　　稳定算法  
+6.基数排序　　radix_sort　　　最坏O(nlog(r)m)　　最好O(nlog(r)m)　　平均O(nlog(r)m)　　稳定算法
 
  
