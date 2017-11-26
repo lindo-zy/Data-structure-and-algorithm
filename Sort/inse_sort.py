@@ -19,7 +19,7 @@ def insert_sort(lists):
     return lists
 
 
-a = [5, 10, 2, 7, 8]
+a = [6, 1, 2, 7, 9, 3, 4, 5, 10, 8]
 print("排序前:", a)
 b = insert_sort(a)
 print("排序后", b)

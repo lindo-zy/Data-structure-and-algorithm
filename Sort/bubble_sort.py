@@ -7,7 +7,7 @@
 
 def bubble_sort(lists):
     count = len((lists))
-    for i in range(count):
+    for i in range(count):  # 从0开始排序
         for j in range(1, count - i):
             if lists[j - 1] > lists[j]:
                 lists[j - 1], lists[j] = lists[j], lists[j - 1]
@@ -15,7 +15,7 @@ def bubble_sort(lists):
     return lists
 
 
-a = [5, 10, 2, 7, 8]
+a = [6, 1, 2, 7, 9, 3, 4, 5, 10, 8]
 print("排序前:", a)
 b = bubble_sort(a)
 print("排序后", b)
