@@ -37,12 +37,13 @@ Data structure and algorithm in python3
 字典和集合(本章节较为困难,以后再进行修正补充)
 ---
 * Sort  
-排序  
-1.插入排序　　insert_sort　　最坏O(n^2)　　最好O(n)　　平均O(n^2)  　稳定算法  
-2.冒泡排序　　bubble_sort  　最坏O(n^2)　　最好O(n)　　平均O(n^2)　　稳定算法  
-3.选择排序　　select_sort　　最坏O(n^2)　　最好O(n^2)　平均O(n^2)　　不稳定算法    
-4.快速排序　　quick_sort　　 最坏O(n^2)　　最好O(n*logn)　平均O(n*logn)　　不稳定算法  
-5.归并排序　　merge_sort　　 最坏O(n*logn)　　最好O(n*logn)　　平均O(n*logn)　　稳定算法  
-6.基数排序　　radix_sort　　　最坏O(nlog(r)m)　　最好O(nlog(r)m)　　平均O(nlog(r)m)　　稳定算法
 
- 
+名称 | 最坏时间| 最好时间|平均时间|类型
+---|---|---|---|---
+插入排序(insert_sort) |O(n^2) |O(n) |O(n^2) |稳定算法  |
+冒泡排序(bubble_sort) |O(n^2) |O(n) |O(n^2) |稳定算法  |
+选择排序(select_sort) |O(n^2) |O(n) |O(n^2) |不稳定算法  |
+快速排序(quick_sort) |O(n^2) |O(n*logn) |O(n*logn) |不稳定算法  |
+归并排序(merge_sort) |O(n*logn)　 |O(n*logn)　 |O(n*logn)　 |稳定算法  |
+基数排序(radix_sort) |O(nlog(r)m)　 |O(nlog(r)m)　 |O(nlog(r)m)　 |稳定算法  |
+
